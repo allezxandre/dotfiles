@@ -10,3 +10,4 @@ zstyle ':prezto:*:*' case-sensitive 'no'
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:module:prompt' theme 'skwp'
+zstyle ':completion:*' menu select
