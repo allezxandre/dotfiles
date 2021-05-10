@@ -1,9 +1,8 @@
-zstyle ':prezto:module:syntax-highlighting' highlighters \
-  'main' \
-  'brackets' \
-  'pattern' \
-  'cursor' \
-  'root'
+ zstyle ':prezto:module:syntax-highlighting' highlighters \
+   'main' \
+   'brackets' \
+   'pattern' \
+   'cursor'
 zstyle ':prezto:module:terminal' auto-title 'yes'
 # Set case-sensitivity for completion, history lookup, etc.
 zstyle ':prezto:*:*' case-sensitive 'no'
