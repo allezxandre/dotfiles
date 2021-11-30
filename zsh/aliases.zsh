@@ -1,8 +1,5 @@
 # Aliases in this file are bash and zsh compatible
 
-# Don't change. The following determines where YADR is installed.
-yadr=$HOME/.yadr
-
 # Get operating system
 platform='unknown'
 unamestr=$(uname)
@@ -11,13 +8,6 @@ if [[ $unamestr == 'Linux' ]]; then
 elif [[ $unamestr == 'Darwin' ]]; then
   platform='darwin'
 fi
-
-# YADR support
-alias yav='yadr vim-add-plugin'
-alias ydv='yadr vim-delete-plugin'
-alias ylv='yadr vim-list-plugin'
-alias yup='yadr update-plugins'
-alias yip='yadr init-plugins'
 
 # PS
 alias psa="ps aux"
@@ -128,7 +118,6 @@ alias less='less -r'
 alias tf='tail -f'
 alias l='less'
 alias lh='ls -alt | head' # see the last modified files
-alias screen='TERM=screen screen'
 alias cl='clear'
 
 # Zippin
@@ -136,17 +125,6 @@ alias gz='tar -zcvf'
 
 alias ka9='killall -9'
 alias k9='kill -9'
-
-# Gem install
-alias sgi='sudo gem install --no-ri --no-rdoc'
-
-# TODOS
-# This uses NValt (NotationalVelocity alt fork) - http://brettterpstra.com/project/nvalt/
-# to find the note called 'todo'
-alias todo='open nvalt://find/todo'
-
-# Forward port 80 to 3000
-alias portforward='sudo ipfw add 1000 forward 127.0.0.1,3000 ip from any to any 80 in'
 
 alias rdm='rake db:migrate'
 alias rdmr='rake db:migrate:redo'
@@ -163,19 +141,5 @@ alias grb='git recent-branches'
 [[ "$(uname)" = "Darwin" ]] && alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 [[ "$(uname)" = "Darwin" ]] && alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-alias dbtp='spring rake db:test:prepare'
-alias dbm='spring rake db:migrate'
-alias dbmr='spring rake db:migrate:redo'
-alias dbmd='spring rake db:migrate:down'
-alias dbmu='spring rake db:migrate:up'
-
-# Homebrew
-[[ "$(uname)" = "Darwin" ]] && alias brewu='brew update && brew upgrade && brew cleanup && brew prune && brew doctor'
-
 # Emacs
 [[ "$(uname)" = "Darwin" ]] && alias emacs='open -a emacs'
-
-# Stream
-alias peerflixVLC='peerflix -d -n --vlc -l'
-
-type tsp >/dev/null 2>&1 && alias lq="tsp ~/.bin/lower-quality.sh"
