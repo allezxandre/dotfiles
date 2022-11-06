@@ -1,41 +1,42 @@
 if [ ! -d "${HOME}/.zgen" ]; then
-    git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
+  git clone https://github.com/tarjoilija/zgen.git "${HOME}/.zgen"
 fi
 
 source "${HOME}/.zgen/zgen.zsh"
 
 if ! zgen saved; then
-    echo "ZGen is regenerating configuration..."
-    # specify plugins here
+  echo "ZGen is regenerating configuration..."
+  # specify plugins here
 
-    # zgen load jeffreytse/zsh-vi-mode
+  # zgen load jeffreytse/zsh-vi-mode
 
-    # Prezto
-    zgen prezto
+  # Prezto
+  zgen prezto
 
-    zgen prezto environment
-    zgen prezto terminal
-    zgen prezto editor
-    zgen prezto history
-    zgen prezto directory
-    zgen prezto spectrum
-    zgen prezto utility
-    zgen prezto completion
-    zgen prezto archive
-    zgen prezto git
-    zgen prezto command-not-found
-    zgen prezto ssh
-    zgen prezto syntax-highlighting
-    zgen prezto history-substring-search
-    zgen prezto prompt
+  zgen prezto environment
+  zgen prezto terminal
+  zgen prezto editor
+  zgen prezto history
+  zgen prezto directory
+  zgen prezto spectrum
+  zgen prezto utility
+  zgen prezto completion
+  zgen prezto archive
+  zgen prezto git
+  zgen prezto command-not-found
+  zgen prezto ssh
+  zgen prezto syntax-highlighting
+  zgen prezto history-substring-search
+  zgen prezto prompt
 
-    # Other
-    zgen load spwhitt/nix-zsh-completions
+  # Other
+  zgen load spwhitt/nix-zsh-completions
 
-    # generate the init script from plugins above
-    zgen save
+  zgen load jonmosco/kube-ps1
+
+  # generate the init script from plugins above
+  zgen save
 fi
-
 
 ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BLINKING_BEAM
 
