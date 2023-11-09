@@ -23,7 +23,6 @@ if ! zgen saved; then
   zgen prezto completion
   zgen prezto archive
   zgen prezto git
-  zgen prezto command-not-found
   zgen prezto ssh
   zgen prezto syntax-highlighting
   zgen prezto history-substring-search
