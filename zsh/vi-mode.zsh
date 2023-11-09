@@ -1,3 +1,3 @@
 set -o vi
-export EDITOR=vim
+export EDITOR=code
 export VISUAL=vim
